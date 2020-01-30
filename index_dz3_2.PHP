@@ -1,10 +1,10 @@
 
 <?php
 $list=[
-       42=> 'cat.jpg',
-    43=>'dog.jpg',
-    44=>'chicken.jpg',
-    45=>'fish.jpg'
+       42=> '/cat.jpg',
+    43=>'/dog.jpg',
+    44=>'/chicken.jpg',
+    45=>'/fish.jpg'
 ];
 /*альтернативное решение
 $list=scandir(__DIR__ . '/images');
