@@ -11,21 +11,22 @@ include __DIR__. '/discriminant.php';
     <h1> PHP </h1>
     <p>урок 2</p>
         <?php
-        $a=1; $b=-6; $c=-36;
+        $a=1; $b=-10; $c=-36;
         ?>
 
     <hr>
     <h2> <?php echo $a ?> * x<sup>2</sup> + <?php echo $b ?> * x + <?php echo $c ?> = 0 </h2>
     <hr>
         <?php
+        $d=discriminant($a, $b, $c);
         if ($a==0) {
             exit('неправильно заданы данные');
-        } elseif (discriminant($a, $b, $c)>=0){
+        } elseif ($d>=0){
         } else {
             exit('нет решений');
         }
-        $x1=root1($a, $b, $c);
-        $x2=root2($a, $b, $c);
+        $x1=(-$b+$d)/2*$a;
+        $x2=(-$b-$d)/2*$a;
         ?>
 
     <p>х1=</p>
