@@ -1,6 +1,4 @@
 <?php
-
-
 function discriminant($a, $b, $c) {
     return sqrt( $b**2-4*$a*$c);
 }

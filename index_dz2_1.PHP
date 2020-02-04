@@ -1,39 +1,67 @@
 
 <html>
-<head>
-    <title>PHP-1</title>
-</head>
-<body>
-<h1>PHP</h1>
-<p>урок 2</p>
+    <head>
+        <title>PHP-1</title>
+    </head>
+    <body>
+    <h1> PHP </h1>
+    <p>урок 2</p>
+        <p>Таблица истинности</p>
+    <hr />
+    <table border="1">
+        <caption>И</caption>
+        <tr>
+            <td></td>
+            <th>0</th>
+            <th>1</th>
+        </tr>
+        <tr>
+            <th>0</th>
+            <td><?php echo (int) (false && false); ?></td>
+            <td><?php echo (int) (false && true); ?></td>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td><?php echo (int) (true && false); ?></td>
+            <td><?php echo (int) (true && true); ?></td>
+        </tr>
+    </table>
+    <table border="1">
+        <caption>ИЛИ</caption>
+        <tr>
+            <td></td>
+            <th>0</th>
+            <th>1</th>
+        </tr>
+        <tr>
+            <th>0</th>
+            <td><?php echo (int) (false || false); ?></td>
+            <td><?php echo (int) (false || true); ?></td>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td><?php echo (int) (true || false); ?></td>
+            <td><?php echo (int) (true || true); ?></td>
+        </tr>
+    </table>
+    <table border="1">
+        <caption>исключающая ИЛИ</caption>
+        <tr>
+            <td></td>
+            <th>0</th>
+            <th>1</th>
+        </tr>
+        <tr>
+            <th>0</th>
+            <td><?php echo (int) (false xor false); ?></td>
+            <td><?php echo (int) (false xor true); ?></td>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td><?php echo (int) (true xor false); ?></td>
+            <td><?php echo (int) (true xor true); ?></td>
+        </tr>
+    </table>
 
-<p>Таблица истинности</p>
-<hr />
-<?php
-
-$a=array(0,1);
-$b=array(0,1);
-foreach ( $a as $A)
-    foreach ( $b as $B)
-    {
-        $C =  $A xor $B;
-        $D =  $A || $B;
-        $K =  $A && $B;
-
-        echo (int)$A.' && '.(int)$B.' = '.(int)$K.';'."\n".(int)$A.' xor '.(int)$B.' = '.(int)$C.';'."\n".(int)$A.' || '.(int)$B.' = '.(int)$D."\n".'<br>';
-        /*
-              При каждом проходе цикла на экран будет выводится элемент сравнения массивов.
-        "\n" начинает новую строку, т.е. делит строку на несколько при выводе элемента.
-        . склеивает строки (контаминация).
-        Благодаря '<br>',  получаем столбец элементов нашего массива. Каждый элемент образуется в результате прхоода
-         цикла.
-        Если набрать echo $A, то при обращении сравнения в false выводится результат без содержимого.
-        Набрав комбинацию  echo (int)$A переменная $А при обращении сравнения в true будет выводить 1, и наоборот
-        при false - 0. Абсалютно также действует набор кода echo ($A?'1':'0'). Т.е. значение boolean приводим к числу (кастинг).
-          */
-    }
-
-?>
-
-</body>
+    </body>
 </html>
