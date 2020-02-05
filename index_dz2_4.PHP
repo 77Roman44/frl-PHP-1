@@ -1,6 +1,6 @@
 
 <?php
-include __DIR__. '/name_sex.php';
+include __DIR__. '/name_gender.php';
 ?>
 
 <html>
@@ -13,12 +13,12 @@ include __DIR__. '/name_sex.php';
         <p>Определение пола по имени</p>
     <hr>
         <?php
-        $имя= 'Роман';
+        $имя= 'Илья';
         echo $имя;
         ?>
     <hr>
         <?php
-        echo sex ($имя);
+        echo gender ($имя);
         ?>
 
     </body>
