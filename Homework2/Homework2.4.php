@@ -1,6 +1,6 @@
 
 <?php
-include __DIR__. '/name_gender.php';
+include __DIR__ . '/Namegender.php';
 ?>
 
 <html>
@@ -9,16 +9,16 @@ include __DIR__. '/name_gender.php';
     </head>
     <body>
     <h1> PHP </h1>
-    <p>урок 2</p>
+    <h2>урок 2</h2>
         <p>Определение пола по имени</p>
     <hr>
         <?php
-        $имя= 'Илья';
-        echo $имя;
+        $name= 'Ирина';
+        echo $name;
         ?>
     <hr>
         <?php
-        echo gender ($имя);
+        echo gender($name);
         ?>
 
     </body>
