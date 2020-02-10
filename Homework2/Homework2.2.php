@@ -1,6 +1,7 @@
 
 <?php
 include __DIR__ . '/discriminant.php';
+include __DIR__ . '/formatNumber.php';
 ?>
 
 <html>
@@ -11,7 +12,7 @@ include __DIR__ . '/discriminant.php';
     <h1> PHP </h1>
     <h2>урок 2</h2>
         <?php
-        $a=10; $b=20; $c=-10;
+        $a=-2; $b=2; $c=-10;
         ?>
 
     <hr>
@@ -36,22 +37,23 @@ include __DIR__ . '/discriminant.php';
     <hr>
     <b>
         <?php
-        if ($a==0 || ($b==0 & $c==0)) {
-            exit ('неправильно заданы данные');
+        if ($a==0 || ($b==0 && $c==0)) {
+            echo ('неправильно заданы данные');
         }
+
         $d=sqrt(discriminant($a, $b, $c));
 
         if ($d==0) {
-           $x=-$b/2*$a;
-           exit ('x1=x2=' . -$b/2*$a);
+           $x=-$b/(2*$a);
+           exit ('x1 = x2 = ' . $x);
         } elseif ($d>=0) {
 
         } else {
-            exit ('Дискиминант < 0. Уравнение не имеет решений');
+            echo ('Дискиминант < 0. Уравнение не имеет решений');
         }
-        $x1=(-$b+$d)/2*$a;
-        $x2=(-$b-$d)/2*$a;
-        echo 'x1=' . $x1 . '<br>' . 'x2=' . $x2;
+        $x1=(-$b+$d)/(2*$a);
+        $x2=(-$b-$d)/(2*$a);
+        echo 'x1 = ' . $x1 . '<br>' . 'x2 = ' . $x2;
         ?>
     </b>
     </body>
