@@ -2,14 +2,14 @@
 function formatNumber ($f)
 {
     switch ($f) {
-        case $f>0:
-            echo '+' . $f;
+        case 0:
+            return;
             break;
         case $f<0:
-            echo '-' . $f;
+            return ' - ' . (abs ($f));
             break;
-        case $f==0:
-            echo '';
+        case $f>0:
+            return ' + ' . (abs ($f));
             break;
     }
 }
