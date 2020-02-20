@@ -1,7 +1,8 @@
 
+
 <?php
 $list=[
-       42=> '/cat.jpg',
+    42=> '/cat.jpg',
     43=>'/dog.jpg',
     44=>'/chicken.jpg',
     45=>'/fish.jpg'
@@ -12,6 +13,4 @@ $list=array_diff ($list, ['.','..']);*/
 
 ?>
 
-            <img src="/images/<?php echo $list[$_GET['id']]; ?>">
-
-
+<img src="/Homework3/images/<?php echo $list[$_GET['id']]; ?>">

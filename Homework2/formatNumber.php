@@ -1,8 +1,8 @@
 <?php
 function formatNumber ($f)
 {
-    switch ($f) {
-        case 0:
+    switch (true) {
+        case (float) $f === (float) 0:
             return;
             break;
         case $f<0:
